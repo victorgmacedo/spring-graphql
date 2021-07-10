@@ -25,13 +25,13 @@ public class ClienteResource implements GraphQLQueryResolver, GraphQLMutationRes
         return clienteService.findAll();
     }
 
-    public Cliente save(ClienteInput clienteInput){
+    public Cliente salvarCliente(ClienteInput clienteInput){
         Cliente cliente = new Cliente();
         BeanUtils.copyProperties(clienteInput, cliente);
         return clienteService.save(cliente);
     }
 
-    public Boolean delete(Long id){
+    public Boolean deletarCliente(Long id){
         clienteService.remove(id);
         return true;
     }

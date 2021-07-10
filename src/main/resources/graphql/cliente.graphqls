@@ -2,6 +2,8 @@ type Cliente {
     id:ID
     nome:String
     email: String
+
+    compras:[Compra]
 }
 
 input ClienteInput {
@@ -16,6 +18,6 @@ extend type Query {
 }
 
 extend type Mutation {
-    save(cliente:ClienteInput):Cliente
-    delete(id:ID):Boolean
+    salvarCliente(cliente:ClienteInput):Cliente
+    deletarCliente(id:ID):Boolean
 }

@@ -8,20 +8,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Cliente {
+public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String email;
+    private BigDecimal valor;
 
-    public Cliente(Long id){
+    public Produto(Long id){
         this.id = id;
     }
 }
