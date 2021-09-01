@@ -1,0 +1,2 @@
+- name: Simple commit
+  uses: zwaldowski/git-commit-action@v1
