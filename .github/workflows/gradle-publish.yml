@@ -1,7 +1,17 @@
 name: Retry
-on: []
+on:  
+   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
 jobs:
-  retry:
+  say_hello:
     runs-on: ubuntu-latest
     steps:
       - uses: zwaldowski/git-commit-action@v1
